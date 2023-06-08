@@ -42,33 +42,20 @@ const LostAndFound = () => {
 
   return (
     <div>
-      <h1 style={{ fontSize: "24px", marginBottom: "16px" }}>Lost and Found</h1>
-      <ul style={{ listStyle: "none", padding: 0 }}>
+      <h1 className="text-2xl mb-4">Lost and Found</h1>
+      <ul className="list-none p-0">
         {items.map((item) => (
-          <li key={item.id} style={{ marginBottom: "16px" }}>
-            <h2 style={{ fontSize: "20px", marginBottom: "8px" }}>{item.name}</h2>
-            <p style={{ marginBottom: "8px" }}>{item.description}</p>
+          <li key={item.id} className="mb-4">
+            <h2 className="text-lg mb-2">{item.name}</h2>
+            <p className="mb-2">{item.description}</p>
             <button
-              style={{
-                marginRight: "8px",
-                padding: "8px 16px",
-                backgroundColor: "#4CAF50",
-                color: "white",
-                border: "none",
-                borderRadius: "4px",
-              }}
+              className="mr-2 px-4 py-2 bg-green-500 text-white border-none rounded-md"
               onClick={() => handleUpdateItem(item.id)}
             >
               Update
             </button>
             <button
-              style={{
-                padding: "8px 16px",
-                backgroundColor: "#f44336",
-                color: "white",
-                border: "none",
-                borderRadius: "4px",
-              }}
+              className="px-4 py-2 bg-red-500 text-white border-none rounded-md"
               onClick={() => handleDeleteItem(item.id)}
             >
               Delete
@@ -77,40 +64,28 @@ const LostAndFound = () => {
         ))}
       </ul>
       {showForm && (
-        <form onSubmit={handleSubmit} style={{ marginBottom: "16px" }}>
+        <form onSubmit={handleSubmit} className="mb-4">
           <input
             name="name"
             type="text"
             placeholder="Name"
-            style={{ marginRight: "8px", padding: "4px 8px", borderRadius: "4px" }}
+            className="mr-2 p-2 rounded-md"
           />
           <input
             name="description"
             type="text"
             placeholder="Description"
-            style={{ marginRight: "8px", padding: "4px 8px", borderRadius: "4px" }}
+            className="mr-2 p-2 rounded-md"
           />
           <button
             type="submit"
-            style={{
-              backgroundColor: "#4CAF50",
-              color: "white",
-              border: "none",
-              borderRadius: "4px",
-              padding: "8px 16px",
-            }}
+            className="bg-green-500 text-white border-none rounded-md px-4 py-2"
           >
             Update
           </button>
           <button
             onClick={handleCloseForm}
-            style={{
-              backgroundColor: "#f44336",
-              color: "white",
-              border: "none",
-              borderRadius: "4px",
-              padding: "8px 16px",
-            }}
+            className="bg-red-500 text-white border-none rounded-md px-4 py-2"
           >
             Cancel
           </button>
