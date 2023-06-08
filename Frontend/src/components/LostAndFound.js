@@ -42,7 +42,7 @@ const LostAndFound = () => {
 
   return (
     <div>
-      <h1 className="text-2xl mb-4">Lost and Found</h1>
+      <h1 className="text-4xl font-bold mb-4">Lost and Found</h1>
       <ul className="list-none p-0">
         {items.map((item) => (
           <li key={item.id} className="mb-4">
