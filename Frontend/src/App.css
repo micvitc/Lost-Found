@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+@media(max-width: 767px){
+  .space{
+      padding-top: 16rem; /* 256px */
+      padding-bottom: 16rem; /* 256px */
+  }
+
+}
+@media(max-width: 573px){
+  .space{
+      padding-top: 16rem; /* 256px */
+      padding-bottom: 16rem; /* 256px */
+      padding-top: 10%;
+  }
+}
